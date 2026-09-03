@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI People Counting & Crowd Monitoring</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1120;
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111827;
+            padding: 20px 8%;
+            border-bottom: 1px solid #263244;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .status {
+            color: #22c55e;
+            font-size: 14px;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            padding: 60px 8%;
+            background: linear-gradient(135deg, #0b1120, #172554);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #1e3a8a;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(40px, 7vw, 72px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .highlight {
+            color: #60a5fa;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            font-size: 18px;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            text-decoration: none;
+            padding: 13px 22px;
+            border-radius: 8px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .secondary {
+            border: 1px solid #475569;
+            color: white;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #94a3b8;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #111827;
+            border: 1px solid #263244;
+            border-radius: 14px;
+            padding: 25px;
+        }
+
+        .icon {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .architecture {
+            background: #0f172a;
+        }
+
+        .flow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .flow-box {
+            background: #111827;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 20px;
+            min-width: 150px;
+            text-align: center;
+        }
+
+        .arrow {
+            color: #60a5fa;
+            font-size: 25px;
+        }
+
+        .tech-list {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .tech {
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 10px 17px;
+            border-radius: 20px;
+            color: #cbd5e1;
+        }
+
+        .monitor {
+            text-align: center;
+            background: linear-gradient(135deg, #172554, #0f172a);
+        }
+
+        .monitor-box {
+            max-width: 700px;
+            margin: auto;
+            background: #111827;
+            border: 1px solid #334155;
+            border-radius: 15px;
+            padding: 35px;
+        }
+
+        .monitor-box p {
+            color: #94a3b8;
+            margin: 15px 0 25px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #070b14;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 18px 5%;
+            }
+
+            .hero {
+                padding: 50px 5%;
+            }
+
+            section {
+                padding: 55px 5%;
+            }
+
+            .status {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">AI Crowd Monitor</div>
+        <div class="status">● System Online</div>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+
+        <div class="tag">AI • COMPUTER VISION • REAL-TIME MONITORING</div>
+
+        <h1>
+            AI-Powered
+            <span class="highlight">People Counting</span>
+            & Crowd Monitoring
+        </h1>
+
+        <p>
+            A real-time computer vision system that detects, tracks and counts
+            people while monitoring crowd levels using AI.
+        </p>
+
+        <div class="buttons">
+            <a href="#monitor" class="button primary">
+                View Monitoring
+            </a>
+
+            <a href="#technology" class="button secondary">
+                Explore Technology
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section>
+
+    <div class="section-title">
+        <h2>What the System Does</h2>
+        <p>Real-time intelligent crowd monitoring</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">👁️</div>
+            <h3>Person Detection</h3>
+            <p>
+                Detects people in live camera footage using YOLO object detection.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎯</div>
+            <h3>Person Tracking</h3>
+            <p>
+                Tracks individual people across video frames using tracking IDs.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">↔️</div>
+            <h3>Entry / Exit</h3>
+            <p>
+                Uses a virtual counting line to identify people entering and leaving.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📊</div>
+            <h3>Crowd Intelligence</h3>
+            <p>
+                Calculates occupancy and provides crowd-level information.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="architecture">
+
+    <div class="section-title">
+        <h2>System Architecture</h2>
+        <p>How the AI system works</p>
+    </div>
+
+    <div class="flow">
+
+        <div class="flow-box">
+            📷<br>
+            Camera / Video
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="flow-box">
+            🤖<br>
+            YOLO Detection
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="flow-box">
+            🎯<br>
+            Object Tracking
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="flow-box">
+            📈<br>
+            Counting
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="flow-box">
+            🚦<br>
+            Crowd Monitoring
+        </div>
+
+    </div>
+
+</section>
+
+<section id="technology">
+
+    <div class="section-title">
+        <h2>Technology Used</h2>
+        <p>Technologies powering the project</p>
+    </div>
+
+    <div class="tech-list">
+
+        <div class="tech">Python</div>
+        <div class="tech">YOLO</div>
+        <div class="tech">OpenCV</div>
+        <div class="tech">ByteTrack</div>
+        <div class="tech">Computer Vision</div>
+        <div class="tech">Streamlit</div>
+        <div class="tech">AI / ML</div>
+
+    </div>
+
+</section>
+
+<section class="monitor" id="monitor">
+
+    <div class="monitor-box">
+
+        <h2>Live Monitoring</h2>
+
+        <p>
+            The AI monitoring engine runs on the project laptop.
+            When the laptop is online, the live camera monitoring system
+            can be accessed remotely.
+        </p>
+
+        <a href="#" class="button primary" onclick="alert('Live monitoring requires the AI laptop to be ON and connected to the internet.')">
+            Open Live Monitoring
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+
+    AI-Powered Real-Time People Counting and Crowd Monitoring System
+    <br>
+    Academic AIML Minor Project
+
+</footer>
+
+</body>
+</html>
