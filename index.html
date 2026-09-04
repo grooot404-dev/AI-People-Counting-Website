@@ -92,6 +92,7 @@
             border-radius: 8px;
             font-weight: bold;
             display: inline-block;
+            cursor: pointer;
         }
 
         .primary {
@@ -207,6 +208,12 @@
         .monitor-box p {
             color: #94a3b8;
             margin: 15px 0 25px;
+        }
+
+        .live-status {
+            color: #22c55e;
+            font-size: 14px;
+            margin-bottom: 20px;
         }
 
         footer {
@@ -399,7 +406,16 @@
             can be accessed remotely.
         </p>
 
-        <a href="#" class="button primary" onclick="alert('Live monitoring requires the AI laptop to be ON and connected to the internet.')">
+        <div class="live-status">
+            ● Live Monitoring Available
+        </div>
+
+        <a
+            href="https://reason-tool-shared-blind.trycloudflare.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button primary"
+        >
             Open Live Monitoring
         </a>
 
